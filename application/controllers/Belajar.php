@@ -6,7 +6,13 @@ class Belajar extends CI_Controller
     {
         echo "ini function index()";
     }
-    public function bio(){
-        $this->load->view('view_belajar');
-    }
-} 
+   public function parsing(){
+    
+      //$data['bio']="nama saya imam";
+      $data = array(
+         'nama' => "Imam Shamil",
+         'pekerjaan' => "Pelajar"
+      );
+      $this->load->view('view_belajar', $data);
+   }
+}
